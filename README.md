@@ -51,3 +51,6 @@ If you want to build any of the examples (such as mono_euroc), do the following:
 - Right click on it and press build
 
 Then you will find them, say if you do mono_, in (orbslam-windows\Examples\Monocular\Release)
+
+Debugging parameters
+..\Vocabulary\ORBvoc.txt ..\Examples\RGB-D\TUM1.yaml E:\dataset\rgbd_dataset_freiburg1_xyz E:\dataset\rgbd_dataset_freiburg1_xyz\associations.txt
