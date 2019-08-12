@@ -35,9 +35,13 @@ void LoadImages(const string &strAssociationFilename, vector<string> &vstrImageF
 
 int main(int argc, char **argv)
 {
+	cout << argv[1] << endl;
+	cout << argv[2] << endl;
+	cout << argv[3] << endl;
+	cout << argv[4] << endl;
     if(argc != 5)
     {
-        cerr << endl << "Usage: ./rgbd_tum path_to_vocabulary path_to_settings path_to_sequence path_to_association" << endl;
+        cerr << endl << "Usage: ..\Vocabulary\ORBvoc.txt ..\Examples\RGB-D\TUMX.yaml The_dataset_file_path the_associations.txt" << endl;
         return 1;
     }
 
