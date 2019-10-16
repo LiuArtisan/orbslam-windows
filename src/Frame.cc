@@ -84,7 +84,7 @@ Frame::Frame(const cv::Mat &imLeft, const cv::Mat &imRight, const double &timeSt
 
     if(mvKeys.empty())
         return;
-
+	// 特征点畸变矫正
     UndistortKeyPoints();
 
     ComputeStereoMatches();

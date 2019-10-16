@@ -64,7 +64,9 @@ int main(int argc, char **argv)
         cerr << endl << "Different number of images for rgb and depth." << endl;
         return 1;
     }
-
+	// argv[1]:ORB词典
+	// argv[2];相机内参文件
+	// ORB_SLAM2::System::RGBD:指定相机类型为RGBD相机
     // Create SLAM system. It initializes all system threads and gets ready to process frames.
     ORB_SLAM2::System SLAM(argv[1],argv[2],ORB_SLAM2::System::RGBD,true);
 
@@ -97,7 +99,9 @@ int main(int argc, char **argv)
 #else
         std::chrono::monotonic_clock::time_point t1 = std::chrono::monotonic_clock::now();
 #endif
-
+		// imRGB 彩色图片
+		// imD 深度图片
+		// tframe 该帧图像的时间戳
         // Pass the image to the SLAM system
         SLAM.TrackRGBD(imRGB,imD,tframe);
 
